@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Espacio Web Profesional | Claudy Jurgen Vásquez Matos - Matrícula: 2021-0877</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado" id="inicio">
+    <div class="contenedor encabezado-contenido">
+      <img src="imagenes/foto.png" alt="Foto personal de medio cuerpo de Claudy Jurgen Vásquez Matos" class="foto">
+      <div>
+        <h1>Claudy Jurgen Vásquez Matos</h1>
+        <p class="subtitulo">Estudiante de Licenciatura en Informática · UCATEBA</p>
+        <p class="subtitulo">Matrícula: 2021-0877</p>
+        <p class="frase" id="frase">Cargando frase...</p>
+      </div>
+    </div>
+
+    <!-- MENÚ DE NAVEGACIÓN HORIZONTAL -->
+    <nav class="menu" aria-label="Menú principal">
+      <div class="menu-barra">
+        <button id="btnMenu" class="btn-menu" type="button" aria-expanded="false" aria-controls="listaMenu">☰ Menú</button>
+        <ul id="listaMenu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#biografia">Biografía</a></li>
+          <li><a href="#formacion">Formación</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button id="btnTema" class="btn-tema" type="button">🌙 Oscuro</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- INFORMACIÓN PERSONAL -->
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <p>
+        Soy estudiante de Licenciatura en Informática en la Universidad Católica
+        Tecnológica de Barahona (UCATEBA). Además de mis estudios universitarios,
+        me he formado en informática, como chofer y como soldador.
+      </p>
+      <button id="btnMas" type="button">Leer más</button>
+      <p id="masInfo" class="oculto">
+        Me interesa el desarrollo de software y las aplicaciones web, y en este
+        proyecto integro HTML, CSS y JavaScript para presentar mi perfil profesional.
+      </p>
+
+      <h3>Datos personales</h3>
+      <dl class="datos">
+        <dt>Residencia</dt><dd>Barahona, República Dominicana</dd>
+        <dt>Teléfono</dt><dd>829-716-2871</dd>
+        <dt>Estudios actuales</dt><dd>Licenciatura en Informática (UCATEBA)</dd>
+        <dt>Bachillerato</dt><dd>Liceo Politécnico Profesor Juan Emilio Bosch y Gaviño, 2019</dd>
+        <dt>Idiomas</dt><dd>Español (nativo)</dd>
+      </dl>
+    </section>
+
+    <!-- FORMACIÓN ACADÉMICA -->
+    <section id="formacion">
+      <h2>Formación académica</h2>
+      <ol class="linea">
+        <li>
+          <strong>2019</strong>
+          <span>Bachiller — Liceo Politécnico Profesor Juan Emilio Bosch y Gaviño</span>
+        </li>
+        <li>
+          <strong>Curso</strong>
+          <span>Informática — Escuela Vocacional</span>
+        </li>
+        <li>
+          <strong>Formación</strong>
+          <span>Chofer y soldador</span>
+        </li>
+        <li>
+          <strong>Actualidad</strong>
+          <span>Licenciatura en Informática — UCATEBA</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TABLA DE HABILIDADES -->
+    <section id="habilidades">
+      <h2>Tabla de habilidades</h2>
+      <div class="filtros" role="group" aria-label="Filtrar habilidades">
+        <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
+        <button type="button" class="filtro" data-filtro="Técnica">Técnicas</button>
+        <button type="button" class="filtro" data-filtro="Personal">Personales</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Habilidad</th><th>Tipo</th><th>Nivel</th></tr>
+        </thead>
+        <tbody>
+          <tr data-tipo="Técnica"><td>Informática</td><td>Técnica</td><td><span class="barra"><i style="width:80%"></i></span> 80 %</td></tr>
+          <tr data-tipo="Técnica"><td>HTML, CSS y JavaScript</td><td>Técnica</td><td><span class="barra"><i style="width:65%"></i></span> 65 %</td></tr>
+          <tr data-tipo="Técnica"><td>Conducción de vehículos</td><td>Técnica</td><td><span class="barra"><i style="width:85%"></i></span> 85 %</td></tr>
+          <tr data-tipo="Técnica"><td>Soldadura</td><td>Técnica</td><td><span class="barra"><i style="width:75%"></i></span> 75 %</td></tr>
+          <tr data-tipo="Personal"><td>Trabajo en equipo</td><td>Personal</td><td><span class="barra"><i style="width:85%"></i></span> 85 %</td></tr>
+          <tr data-tipo="Personal"><td>Responsabilidad</td><td>Personal</td><td><span class="barra"><i style="width:90%"></i></span> 90 %</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Teléfono: <strong>829-716-2871</strong> · Barahona, República Dominicana</p>
+
+      <div class="acciones">
+        <a class="boton" href="tel:+18297162871">📞 Llamar</a>
+        <a class="boton" href="https://wa.me/18297162871" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <button type="button" id="btnCopiar">📋 Copiar teléfono</button>
+        <button type="button" id="btnImprimir">🖨️ Imprimir / Guardar PDF</button>
+      </div>
+
+      <h3>Formulario de contacto</h3>
+      <form id="formContacto" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+        <button type="submit">Enviar por WhatsApp</button>
+        <p id="respuesta" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Claudy Jurgen Vásquez Matos · Matrícula: 2021-0877</p>
+    <p><a href="#inicio">↑ Volver arriba</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
